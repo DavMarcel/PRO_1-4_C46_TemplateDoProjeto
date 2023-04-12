@@ -115,8 +115,7 @@ class Game{
                      
                  }
                  if(frameCount % 40 === 0){
-                    //chame addObstacles()
-                 }
+                    this.addObstacles();
                  
                   if (player.index !== null) {
                       for (var i = 0; i < fruitGroup.length; i++) {
@@ -132,7 +131,7 @@ class Game{
                       }
 
                       if(obstacleGroup.isTouching(players)){
-                       //escreva o código para atribuir o valor de gameState a End (fim)
+                        gameState = "End";
                       }
                   }
                 }
@@ -165,7 +164,9 @@ class Game{
     addObstacles()
     {       
             var x, y;
-            //escreva o código para criar um obstáculo na posição x aleatória.
+            
+            var x = random(50, width-50); 
+            var y = 0;
             
             
             y = 0
